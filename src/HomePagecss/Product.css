@@ -1,0 +1,233 @@
+.product-section {
+ padding: 100px 5%;
+  color: #ffffff;
+  overflow: hidden;
+  /* Deep Radial Gradient for the "Spotlight" effect */
+  background: radial-gradient(
+    circle at 50% 50%, 
+    rgb(9, 21, 47) 0%,   /* Center: Deep Slate */
+    rgba(11, 14, 35, 1) 50%,  /* Middle: Navy */
+    rgba(7, 9, 22, 1) 100%    /* Edges: Near Black */
+  );
+  position: relative;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.innovation-tag {
+  display: inline-block;
+  background: rgba(0, 212, 255, 0.1);
+  color: rgb(0, 212, 255);
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 24px;
+}
+
+.product-headline {
+  font-size: clamp(30px, 4vw, 54px);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+  color: white;
+}
+
+.highlight-text {
+  color: rgb(99, 91, 255);
+}
+
+.product-subtext {
+  color: #94a3b8;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 540px;
+}
+.product-visual-container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  background: rgba(99, 91, 255, 0.15); /* Match your highlight-text color */
+  filter: blur(100px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.feature-item-card {
+  display: flex;
+  align-items: center; /* Centers the icon and text vertically */
+  gap: 20px;
+  
+  /* Deep Midnight Background */
+  background: #0d1127; 
+  
+  /* Subtle Purple Border */
+  border: 1px solid rgba(99, 91, 255, 0.2); 
+  
+  padding: 18px 25px;
+  border-radius: 24px; /* Makes it look like a rounded pill/row */
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.feature-item-card:hover {
+  /* Slightly lighter on hover */
+  background: #141933; 
+  border-color: rgba(99, 91, 255, 0.5);
+  transform: scale(1.02); /* Slight pop effect */
+  box-shadow: 0 0 20px rgba(99, 91, 255, 0.1);
+}
+
+.status-indicator {
+  width: 36px;
+  height: 36px;
+  background: rgba(99, 91, 255, 0.15); /* Soft purple circle */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-shrink: 0; /* Prevents the circle from squishing */
+}
+
+/* The small bright dot inside the circle */
+.status-indicator::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: #635bff; /* Bright purple dot */
+  border-radius: 50%;
+  box-shadow: 0 0 10px #635bff; /* Neon glow */
+}
+.feature-info h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.feature-info p {
+  font-size: 15px;
+  color: #5b688c; /* Muted gray-blue */
+  margin: 4px 0 0 0;
+}
+
+.platform-btn {
+  margin-top: 30px;
+  background: linear-gradient(135deg, rgb(99, 91, 255), rgb(0, 212, 255));
+  border: none;
+  padding: 16px 32px;
+  border-radius: 12px;
+  color: white;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s;
+}
+
+.platform-btn:hover {
+  transform: translateY(-3px);
+}
+
+.product-visual-container {
+  position: relative;
+}
+
+.ui-screenshot {
+  width: 100%;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+.metric-card {
+  position: absolute;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(12px);
+  padding: 14px 20px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.growth-card {
+  top: -40px;
+  right: -20px;
+}
+
+.accuracy-card {
+  bottom: -30px;
+  left: -20px;
+}
+
+.metric-val {
+  font-size: 20px;
+  font-weight: 800;
+  color: rgb(0, 212, 255);
+}
+
+.metric-label {
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .product-container {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .growth-card {
+    right: 10px;
+    top: -20px;
+  }
+
+  .accuracy-card {
+    left: 10px;
+    bottom: -20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .product-section {
+    padding: 60px 20px;
+  }
+
+  .product-subtext {
+    font-size: 15px;
+  }
+
+  .feature-item-card {
+    padding: 16px;
+  }
+
+  .metric-card {
+    position: static; 
+    margin-top: 10px;
+  }
+
+  .mobile-break {
+    display: none;
+  }
+}
