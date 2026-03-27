@@ -1,33 +1,34 @@
 import React, { useState } from 'react';
 import '../HomePagecss/PartnerShip.css';
+import { FaChartLine, FaMicrochip, FaHeartbeat, FaLayerGroup } from "react-icons/fa";
 
 const Partnerships = () => {
   const [activeTab, setActiveTab] = useState('corporate');
 
   const corporateData = [
-  { name: "NexaCapital", industry: "Finance", region: "North America", initial: "N" },
-  { name: "TechVenture Inc.", industry: "Technology", region: "Global", initial: "T" },
-  { name: "DataCore Systems", industry: "Data & AI", region: "Europe", initial: "D" },
-  { name: "GlobalFinance Group", industry: "Banking", region: "Asia Pacific", initial: "G" },
-  { name: "InnovateTech", industry: "Software", region: "Middle East", initial: "I" },
-  { name: "SilicaGroup", industry: "Semiconductor", region: "East Asia", initial: "S" },
-  { name: "QuantumEdge", industry: "Fintech", region: "North America", initial: "Q" },
-  { name: "MedPlus Corp", industry: "Healthcare", region: "South Asia", initial: "M" },
-  { name: "Apex Financial", industry: "Investment", region: "Europe", initial: "A" },
-  { name: "NeuralSoft", industry: "AI & ML", region: "Global", initial: "N" },
-  { name: "PrismData", industry: "Analytics", region: "Oceania", initial: "P" },
-  { name: "FusionTech", industry: "Cloud", region: "Southeast Asia", initial: "F" },
+  { name: "NexaCapital", industry: "Finance", region: "North America", initial: <FaChartLine /> },
+  { name: "TechVenture Inc.", industry: "Technology", region: "Global", initial: <FaChartLine /> },
+  { name: "DataCore Systems", industry: "Data & AI", region: "Europe", initial: <FaChartLine /> },
+  { name: "GlobalFinance Group", industry: "Banking", region: "Asia Pacific", initial: <FaChartLine />},
+  { name: "InnovateTech", industry: "Software", region: "Middle East", initial: <FaChartLine /> },
+  { name: "SilicaGroup", industry: "Semiconductor", region: "East Asia", initial: <FaChartLine /> },
+  { name: "QuantumEdge", industry: "Fintech", region: "North America", initial: <FaChartLine /> },
+  { name: "MedPlus Corp", industry: "Healthcare", region: "South Asia", initial: <FaChartLine /> },
+  { name: "Apex Financial", industry: "Investment", region: "Europe", initial: <FaChartLine /> },
+  { name: "NeuralSoft", industry: "AI & ML", region: "Global", initial: <FaChartLine /> },
+  { name: "PrismData", industry: "Analytics", region: "Oceania", initial: <FaChartLine /> },
+  { name: "FusionTech", industry: "Cloud", region: "Southeast Asia", initial: <FaChartLine /> },
 ];
 
   const academicData = [
-  { name: "MIT Technology Institute", industry: "AI Research", region: "USA" },
-  { name: "Stanford University", industry: "Finance & Tech", region: "USA" },
-  { name: "Imperial College London", industry: "Engineering", region: "UK" },
-  { name: "National University of Singapore", industry: "Semiconductor", region: "Singapore" },
-  { name: "IIT Bombay", industry: "Computer Science", region: "India" },
-  { name: "ETH Zurich", industry: "Innovation", region: "Switzerland" },
-  { name: "Tsinghua University", industry: "AI & Data", region: "China" },
-  { name: "Tokyo Institute of Technology", industry: "Hardware", region: "Japan" },
+  { name: "MIT Technology Institute", industry: "AI Research", region: "USA", initial: <FaChartLine /> },
+  { name: "Stanford University", industry: "Finance & Tech", region: "USA",initial: <FaChartLine /> },
+  { name: "Imperial College London", industry: "Engineering", region: "UK",initial: <FaChartLine /> },
+  { name: "National University of Singapore", industry: "Semiconductor", region: "Singapore",initial: <FaChartLine /> },
+  { name: "IIT Bombay", industry: "Computer Science", region: "India",initial: <FaChartLine /> },
+  { name: "ETH Zurich", industry: "Innovation", region: "Switzerland",initial: <FaChartLine /> },
+  { name: "Tsinghua University", industry: "AI & Data", region: "China",initial: <FaChartLine /> },
+  { name: "Tokyo Institute of Technology", industry: "Hardware", region: "Japan",initial: <FaChartLine /> },
 ];
 
   return (
@@ -75,6 +76,7 @@ const Partnerships = () => {
           ) : (
             academicData.map((item, i) => (
               <div key={i} className="p-card academic-style">
+                <div className="p-icon">{item.initial}</div>
                 <h3>{item.name}</h3>
                 <p className="p-industry">{item.industry}</p>
                 <p className="p-region">{item.region}</p>
