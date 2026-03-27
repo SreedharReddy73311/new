@@ -1,4 +1,3 @@
-/* --- 1. Global Reset & Theme --- */
 * {
   margin: 0;
   padding: 0;
@@ -6,12 +5,11 @@
 }
 
 body {
-  background-color: #050714; /* Deep dark background */
+  background-color: #050714; 
   font-family: 'Inter', -apple-system, sans-serif;
   color: #ffffff;
 }
 
-/* --- 2. Navbar Styling --- */
 .navbar {
   background-color: #050714;
   height: 80px;
@@ -33,7 +31,6 @@ body {
   margin: 0 auto;
 }
 
-/* Desktop Links (Horizontal) */
 .nav-links {
   display: flex;
   list-style: none;
@@ -43,7 +40,7 @@ body {
 
 .nav-links li a {
   text-decoration: none;
-  color: #94a3b8; /* Default soft grey-blue */
+  color: #94a3b8; 
   padding: 10px 18px;
   border-radius: 14px;
   font-size: 0.9rem;
@@ -52,20 +49,18 @@ body {
   white-space: nowrap;
 }
 
-/* Hover Effect */
 .nav-links li a:hover {
   color: #00d4ff;
   background-color: rgba(255, 255, 255, 0.03);
 }
 
-/* --- 3. THE ACTIVE PILL FIX (From your images) --- */
+
 .active-link a {
-  background-color: #1e293b !important; /* Dark slate grey pill box */
-  color: #00d4ff !important; /* Bright Cyan text */
+  background-color: #1e293b !important;
+  color: #00d4ff !important; 
   font-weight: 600;
 }
 
-/* --- 4. Mobile Toggle & Vertical Menu --- */
 .mobile-toggle {
   display: none;
   flex-direction: column;
@@ -89,11 +84,11 @@ body {
   .nav-links {
     position: fixed;
     top: 80px;
-    left: -100%; /* Hidden off-screen */
+    left: -100%;
     width: 100%;
     height: calc(100vh - 80px);
     background-color: #050714;
-    flex-direction: column; /* VERTICAL STACK like your image */
+    flex-direction: column;
     align-items: flex-start;
     padding: 30px 25px;
     gap: 15px;
@@ -101,20 +96,19 @@ body {
   }
 
   .nav-links.active {
-    left: 0; /* Slide in */
+    left: 0;
   }
 
   .nav-links li a {
     font-size: 1.2rem;
     padding: 12px 24px;
     display: block;
-    width: fit-content; /* Keeps pill tight to the word */
+    width: fit-content;
   }
 }
 
-/* --- 5. Global Page Content Styles --- */
 .page-container {
-  padding-top: 140px; /* Extra space so navbar doesn't cover title */
+  padding-top: 140px; 
   text-align: center;
   min-height: 100vh;
   padding-left: 20px;
@@ -130,7 +124,6 @@ body {
   margin-bottom: 20px;
 }
 
-/* --- 6. Logo & CTA Buttons --- */
 .nav-logo {
   text-decoration: none;
   color: white;
