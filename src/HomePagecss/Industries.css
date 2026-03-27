@@ -121,6 +121,9 @@
 
   font-size: 22px;
 }
+ .card h3 {
+  color: white;
+}
 
 .card.purple .icon {
   background: rgba(124,111,205,0.2);

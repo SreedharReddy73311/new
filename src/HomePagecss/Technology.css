@@ -27,10 +27,12 @@
 }
 
 .tech-main-title {
-  font-size: clamp(28px, 5vw, 54px);
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  color: white;
+ font-size: clamp(38px, 6vw, 50px);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 0.9;
+    margin-bottom: 20px;
+    word-spacing: -0.1em;
 }
 
 .brand-cyan {
@@ -59,8 +61,8 @@
 }
 
 .tech-card.border-purple:hover {
-  background: rgba(129, 140, 248, 0.08); /* Light purple tint */
-  border-color: rgba(129, 140, 248, 0.5); /* Bright purple border */
+  background: rgba(129, 140, 248, 0.08);
+  border-color: rgba(129, 140, 248, 0.5);
   transform: translateY(-5px);
   box-shadow: 0 10px 30px -10px rgba(129, 140, 248, 0.2);
 }
@@ -108,23 +110,28 @@
   transition: all 0.3s ease;
 }
 
-/* Icon colors */
 .icon-purple { color: #818cf8; }
 .icon-cyan { color: #22d3ee; }
 .icon-orange { color: #fbbf24; }
 .icon-teal { color: #2dd4bf; }
 
-/* Accent Borders (FIXED missing ones) */
 .tech-card:hover .tech-icon-wrapper {
   transform: scale(1.1);
   background: rgba(255, 255, 255, 0.05);
 }
 
-.tech-card.border-purple:hover { box-shadow: 0 0 2px rgba(129, 140, 248, 0.3); }
-.tech-card.border-cyan:hover  { box-shadow: 0 0 2px rgba(34, 211, 238, 0.3); }
-.tech-card.border-orange:hover  { box-shadow: 0 0 2px rgba(251, 191, 36, 0.3); }
-.tech-card.border-teal:hover { box-shadow: 0 0 2px rgba(45, 212, 191, 0.3); }
-/* Text */
+.tech-card.border-purple:hover {
+   box-shadow: 0 0 2px rgba(129, 140, 248, 0.3);
+   }
+.tech-card.border-cyan:hover  { 
+  box-shadow: 0 0 2px rgba(34, 211, 238, 0.3);
+ }
+.tech-card.border-orange:hover  { 
+  box-shadow: 0 0 2px rgba(251, 191, 36, 0.3); 
+}
+.tech-card.border-teal:hover {
+   box-shadow: 0 0 2px rgba(45, 212, 191, 0.3); 
+  }
 .tech-text-box h3 {
   font-size: 18px;
   font-weight: 700;

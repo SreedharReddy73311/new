@@ -23,7 +23,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link to="/" className="nav-logo" onClick={closeMenu}>
           <div className="logo-icon">v</div>
-          <span className="logo-text">VIGASI</span>
+          <span className="logo-text">ViGASI</span>
         </Link>
 
         {/* Hamburger Icon (Three Lines) */}

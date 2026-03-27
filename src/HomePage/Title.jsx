@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import React from "react";
 import "../HomePagecss/Title.css";
 
 const stats = [
@@ -8,40 +8,39 @@ const stats = [
   { value: "$2B+", label: "Assets Managed" },
 ];
 
-function Title() {
-  const navigate = useNavigate();
+function Hero() {
   return (
     <section className="hero-section">
-      <div className="hero-container">
+      <div className="hero-wrapper">
+
         <div className="hero-badge">
-          <span className="hero-badge__dot"></span>
-          <span className="hero-badge__text">Super Intelligence · Visionary Growth</span>
+          <span className="hero-dot"></span>
+          <span>Super Intelligence · Visionary Growth</span>
         </div>
 
-        <h1 className="hero-title">
-          Building the Future of <br />
-          <span className="hero-title--gradient">Intelligent Finance</span> and Technology
+        <h1 className="hero-heading">
+          Building the Future of <br className="hide-mobile" />
+          <span className="hero-gradient">Intelligent Finance</span> and <br className="hide-mobile" />
+          Technology
         </h1>
 
-        <p className="hero-description">
-          VIGASI is a global enterprise technology company operating at the
+        <p className="hero-text">
+          ViGASI is a global enterprise technology company operating at the
           intersection of Finance, IT, Medical Intelligence, and Semiconductor
           Innovation — powered by cutting-edge AI.
         </p>
 
         <div className="hero-actions">
-          <button className="btn-primary" onClick={() => navigate('/contact')}>
-            Contact Us <span className="arrow">→</span></button>
-          <button className="btn-secondary" onClick={() => navigate('/products')}>
-             <span className="play-icon">▷</span> Explore Products
-          </button>
+          <button className="hero-btn-primary">Contact Us →</button>
+          <button className="hero-btn-secondary">▶ Explore Products</button>
         </div>
 
+        {/* ✅ Updated Stats Layout */}
         <div className="hero-stats">
           {stats.map((item, i) => (
-            <div key={i} className="stat-item">
-              <h3 className="stat-value">{item.value}</h3>
-              <p className="stat-label">{item.label}</p>
+            <div key={i} className="hero-stat">
+              <h3>{item.value}</h3>
+              <p>{item.label}</p>
             </div>
           ))}
         </div>
@@ -51,4 +50,4 @@ function Title() {
   );
 }
 
-export default Title;
+export default Hero;

@@ -2,12 +2,11 @@
  padding: 100px 5%;
   color: #ffffff;
   overflow: hidden;
-  /* Deep Radial Gradient for the "Spotlight" effect */
   background: radial-gradient(
     circle at 50% 50%, 
-    rgb(9, 21, 47) 0%,   /* Center: Deep Slate */
-    rgba(11, 14, 35, 1) 50%,  /* Middle: Navy */
-    rgba(7, 9, 22, 1) 100%    /* Edges: Near Black */
+    rgb(9, 21, 47) 0%,  
+    rgba(11, 14, 35, 1) 50%,  
+    rgba(7, 9, 22, 1) 100%    
   );
   position: relative;
 }
@@ -34,12 +33,12 @@
 }
 
 .product-headline {
-  font-size: clamp(30px, 4vw, 54px);
-  font-weight: 800;
-  line-height: 1.1;
-  margin-bottom: 20px;
-  letter-spacing: -0.02em;
-  color: white;
+  font-size: clamp(50px, 6vw, 50px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    word-spacing: -0.0em;
 }
 
 .highlight-text {
@@ -48,10 +47,13 @@
 
 .product-subtext {
   color: #94a3b8;
-  font-size: 18px;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.80;
   margin-bottom: 40px;
-  max-width: 540px;
+  font-weight: 500;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .product-visual-container::before {
   content: "";
@@ -61,7 +63,7 @@
   transform: translate(-50%, -50%);
   width: 80%;
   height: 80%;
-  background: rgba(99, 91, 255, 0.15); /* Match your highlight-text color */
+  background: rgba(99, 91, 255, 0.15);
   filter: blur(100px);
   z-index: 0;
   pointer-events: none;
@@ -69,61 +71,54 @@
 
 .feature-item-card {
   display: flex;
-  align-items: center; /* Centers the icon and text vertically */
+  align-items: center;
   gap: 20px;
-  
-  /* Deep Midnight Background */
   background: #0d1127; 
-  
-  /* Subtle Purple Border */
   border: 1px solid rgba(99, 91, 255, 0.2); 
-  
   padding: 18px 25px;
-  border-radius: 24px; /* Makes it look like a rounded pill/row */
+  border-radius: 24px;
   margin-bottom: 16px;
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .feature-item-card:hover {
-  /* Slightly lighter on hover */
   background: #141933; 
   border-color: rgba(99, 91, 255, 0.5);
-  transform: scale(1.02); /* Slight pop effect */
+  transform: scale(1.02); 
   box-shadow: 0 0 20px rgba(99, 91, 255, 0.1);
 }
 
 .status-indicator {
   width: 36px;
   height: 36px;
-  background: rgba(99, 91, 255, 0.15); /* Soft purple circle */
+  background: rgba(99, 91, 255, 0.15);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  flex-shrink: 0; /* Prevents the circle from squishing */
+  flex-shrink: 0; 
 }
 
-/* The small bright dot inside the circle */
 .status-indicator::after {
   content: "";
   width: 8px;
   height: 8px;
-  background: #635bff; /* Bright purple dot */
+  background: #635bff;
   border-radius: 50%;
-  box-shadow: 0 0 10px #635bff; /* Neon glow */
+  box-shadow: 0 0 10px #635bff; 
 }
 .feature-info h4 {
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 15px;
+  font-weight: 500;
   color: #ffffff;
   margin: 0;
 }
 
 .feature-info p {
-  font-size: 15px;
-  color: #5b688c; /* Muted gray-blue */
+  font-size: 13px;
+  color: #94a3b8; 
   margin: 4px 0 0 0;
 }
 
